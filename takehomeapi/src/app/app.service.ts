@@ -5,7 +5,7 @@ const octokit = new Octokit();
 
 @Injectable()
 export class AppService {
-  async getHello() {
+  async getRepo() {
     try {
       const response = await octokit.request(
         'GET /repos/{owner}/{repo}/commits',
