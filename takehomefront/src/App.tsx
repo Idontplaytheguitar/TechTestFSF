@@ -6,24 +6,36 @@ import {
   TabsTrigger,
 } from '../@/components/ui/tabs';
 import { AccordionCommits } from './Components/AccordionCommits';
-import { getCommits } from './utils';
+import { getCommits } from './utils/getCommits';
 import { commit } from './interfaces/commit';
 
 export default function App() {
-  const [commits, setCommits] = useState<commit[]>()
+  const [commits, setCommits] = useState<commit[] | string>();
 
   useEffect(() => {
-    setCommits(getCommits())
-  },[])
+    getCommits()
+      .then((r) => {
+        setCommits(r);
+      })
+      .catch((e) => {
+        setCommits(e);
+      });
+  }, []);
 
   return (
     <div className="bg-slate-950 p-10 h-screen">
-      <Tabs className='w-full flex flex-col justify-center' defaultValue="commits">
+      <Tabs
+        className="w-full flex flex-col justify-center"
+        defaultValue="commits"
+      >
         <TabsList className="gap-3">
           <TabsTrigger value="commits">Commits</TabsTrigger>
           <TabsTrigger value="techs">Technologies</TabsTrigger>
         </TabsList>
-        <TabsContent className='m-5 flex justify-center ' value="commits">
+        <TabsContent
+          className="m-5 flex justify-center "
+          value="commits"
+        >
           <AccordionCommits commits={commits} />
         </TabsContent>
         <TabsContent value="techs"></TabsContent>

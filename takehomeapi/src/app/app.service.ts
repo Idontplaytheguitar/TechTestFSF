@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { Octokit } from 'octokit';
+import { commitParser } from 'src/parsers/commitParser';
 // Didn't use a token because it is not needed for public repos
 const octokit = new Octokit();
 
@@ -14,9 +15,15 @@ export class AppService {
           repo: 'TechTestFSF',
         },
       );
-      return response;
+
+      return commitParser(response);
     } catch (error) {
-      return error;
+      return {
+        status: error?.status || 500,
+        message:
+          error?.response?.data?.message ||
+          'Something went wrong, try again later',
+      };
     }
   }
 }
