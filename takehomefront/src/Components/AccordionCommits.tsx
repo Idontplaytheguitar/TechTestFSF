@@ -29,7 +29,7 @@ export function AccordionCommits(props: {
               <AccordionTrigger className=" ">
                 <div className="flex flex-row w-full gap-2 items-center">
                   <a href={commit.authorLink} target="_blank">
-                    <Avatar className="hover:scale-110">
+                    <Avatar className="hover:scale-110 transition-all">
                       <AvatarImage src={commit.authorAvatar} />
                       <AvatarFallback className="text-xs">
                         avatar not found
