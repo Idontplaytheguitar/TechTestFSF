@@ -1,5 +1,5 @@
 
-GitHub Repository Commits Viewer
+# GitHub Repository Commits Viewer
 This project allows you to view commits from its own GitHub repository. It's a simple and straightforward tool designed to showcase the commit history of the project. Follow the instructions below to set up and run the application.
 
 # Project Initialization Instructions
