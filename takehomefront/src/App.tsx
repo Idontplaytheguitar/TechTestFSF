@@ -8,6 +8,7 @@ import {
 import { AccordionCommits } from './Components/AccordionCommits';
 import { getCommits } from './utils/getCommits';
 import { commit } from './interfaces/commit';
+import { Technologies } from './Components/Technologies';
 
 export default function App() {
   const [commits, setCommits] = useState<commit[] | string>();
@@ -38,7 +39,7 @@ export default function App() {
         >
           <AccordionCommits commits={commits as commit[] | string} />
         </TabsContent>
-        <TabsContent value="techs"></TabsContent>
+        <TabsContent className='flex justify-center items-center' value="techs"><Technologies/></TabsContent>
       </Tabs>
     </div>
   );
