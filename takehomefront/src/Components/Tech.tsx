@@ -1,4 +1,8 @@
-import { Avatar, AvatarImage } from '../../@/components/ui/avatar';
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from '../../@/components/ui/avatar';
 
 export function Tech(props: {
   image: string;
@@ -16,7 +20,8 @@ export function Tech(props: {
       }`}
     >
       <Avatar>
-        <AvatarImage src={image}></AvatarImage>
+        <AvatarFallback>tech</AvatarFallback>
+        <AvatarImage src={image} />
       </Avatar>
       <div className="text-slate-300">{text}</div>
     </a>
