@@ -23,7 +23,7 @@ export default function App() {
   }, []);
 
   return (
-    <div className="bg-slate-950 p-10 h-screen">
+    <div className="bg-slate-950 p-10 min-h-screen">
       <Tabs
         className="w-full flex flex-col justify-center"
         defaultValue="commits"
@@ -36,7 +36,7 @@ export default function App() {
           className="m-5 flex justify-center "
           value="commits"
         >
-          <AccordionCommits commits={commits} />
+          <AccordionCommits commits={commits as commit[] | string} />
         </TabsContent>
         <TabsContent value="techs"></TabsContent>
       </Tabs>
