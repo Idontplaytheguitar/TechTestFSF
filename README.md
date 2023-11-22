@@ -21,6 +21,11 @@ This project allows you to view commits from its own GitHub repository. It's a s
 
 To get started with this project, follow these simple steps:
 
+Open a terminal and use the following command to clone the project: 
+```sh
+   git clone https://github.com/Idontplaytheguitar/TechTestFSF.git
+   ```
+
 ## Setting up the API
 
 1. Open your terminal and navigate to the project folder:
