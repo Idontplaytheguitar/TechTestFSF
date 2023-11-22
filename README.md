@@ -2,6 +2,21 @@
 # GitHub Repository Commits Viewer
 This project allows you to view commits from its own GitHub repository. It's a simple and straightforward tool designed to showcase the commit history of the project. Follow the instructions below to set up and run the application.
 
+# Technologies
+
+## Backend
+- [Nest.js](https://nestjs.com/): Node.js framework for scalable server-side applications.
+
+## Frontend
+- [Vite.js](https://vitejs.dev/): Fast build tool for modern web applications.
+- [React](https://react.dev/): JavaScript library for building interactive user interfaces.
+
+### UI Components
+- [Shadcn.ui](https://ui.shadcn.com/): UI component library for enhancing the user interface.
+
+### Styling
+- [Tailwind CSS](https://tailwindcss.com/): Utility-first CSS framework for quickly building UI.
+
 # Project Initialization Instructions
 
 To get started with this project, follow these simple steps:

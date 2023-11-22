@@ -26,20 +26,20 @@ export function AccordionCommits(props: {
           const messageSplit = commit.commitMessage.split('-');
           return (
             <AccordionItem key={index} value={commit.sha}>
-              <AccordionTrigger className=" ">
+              <AccordionTrigger>
                 <div className="flex flex-row w-full gap-2 items-center">
                   <a href={commit.authorLink} target="_blank">
                     <Avatar className="hover:scale-110 transition-all">
                       <AvatarImage src={commit.authorAvatar} />
                       <AvatarFallback className="text-xs">
-                        avatar not found
+                        Avatar not found
                       </AvatarFallback>
                     </Avatar>
                   </a>
                   <a
                     href={commit.authorLink}
                     target="_blank"
-                    className="hover:underline"
+                    className="hidden sm:block hover:underline"
                   >
                     {commit.author}
                   </a>
@@ -54,7 +54,7 @@ export function AccordionCommits(props: {
               </AccordionTrigger>
               <AccordionContent>
                 {messageSplit.length > 1
-                  ? messageSplit.map((e) => <div>{e}</div>)
+                  ? messageSplit.map((e,k) => <div key={k}>{e}</div>)
                   : commit.commitMessage}
               </AccordionContent>
             </AccordionItem>

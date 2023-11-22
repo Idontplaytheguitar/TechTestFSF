@@ -28,7 +28,7 @@ export function Technologies() {
         className="hover:shadow-slate-300/50"
       />
       <Tech
-        image="https://scontent.fmdq7-1.fna.fbcdn.net/v/t39.30808-6/299463877_560030875914611_8025210373789510385_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE-Iq1jvPWY6yFFcQOwg_OFXyjiulHN1tJfKOK6Uc3W0tFIkZV1-n7Y-L9zoTUwpzPBkAcK1qsjfS4Iur2fOYag&_nc_ohc=RIb5PTroNJUAX-4chiY&_nc_ht=scontent.fmdq7-1.fna&oh=00_AfD_TlqiwGlPvER50QVhfrxabGD7Z-liDAm9uH6vg-K7SQ&oe=6542EF77"
+        image="https://scontent.faep25-1.fna.fbcdn.net/v/t39.30808-6/299463877_560030875914611_8025210373789510385_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeE-Iq1jvPWY6yFFcQOwg_OFXyjiulHN1tJfKOK6Uc3W0tFIkZV1-n7Y-L9zoTUwpzPBkAcK1qsjfS4Iur2fOYag&_nc_ohc=YXMkM1-VoFkAX83zXrB&_nc_ht=scontent.faep25-1.fna&oh=00_AfDnxHQZ4-HeJTeb9wL5REE_kuR0v7euCgQ5Bu7i905Glw&oe=65629377"
         link="https://tailwindcss.com/"
         text="Tailwindcss"
         className="hover:shadow-blue-700/80"

@@ -9,19 +9,31 @@ import { AccordionCommits } from './Components/AccordionCommits';
 import { getCommits } from './utils/getCommits';
 import { commit } from './interfaces/commit';
 import { Technologies } from './Components/Technologies';
+import RepoSearch from './Components/RepoSearch';
+import userAndRepo from './interfaces/userAndRepo';
 
 export default function App() {
   const [commits, setCommits] = useState<commit[] | string>();
+  const [formData, setFormData] = useState<userAndRepo>({
+    user: 'Idontplaytheguitar',
+    repo: 'TechTestFSF',
+  });
+
+  const userAndRepoChange = (obj: userAndRepo) =>
+    setFormData({
+      repo: obj.repo,
+      user: obj.user,
+    });
 
   useEffect(() => {
-    getCommits()
+    getCommits(formData.user, formData.repo)
       .then((r) => {
         setCommits(r);
       })
       .catch((e) => {
         setCommits(e);
       });
-  }, []);
+  }, [formData]);
 
   return (
     <div className="bg-slate-950 p-10 min-h-screen">
@@ -34,12 +46,18 @@ export default function App() {
           <TabsTrigger value="techs">Technologies</TabsTrigger>
         </TabsList>
         <TabsContent
-          className="m-5 flex justify-center "
+          className="m-5 flex flex-col items-center justify-center"
           value="commits"
         >
+          <RepoSearch userAndRepoChange={userAndRepoChange} />
           <AccordionCommits commits={commits as commit[] | string} />
         </TabsContent>
-        <TabsContent className='flex justify-center items-center' value="techs"><Technologies/></TabsContent>
+        <TabsContent
+          className="flex justify-center items-center"
+          value="techs"
+        >
+          <Technologies />
+        </TabsContent>
       </Tabs>
     </div>
   );
