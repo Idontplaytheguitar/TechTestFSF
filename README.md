@@ -75,3 +75,4 @@ Once the frontend is up and running, you will see a link in your terminal. You c
 - Copying and pasting the following URL into your web browser:
   [http://localhost:5173/](http://localhost:5173/)
 
+- If you want to see it online: [https://tech-test-fsf.vercel.app/](https://tech-test-fsf.vercel.app/)
